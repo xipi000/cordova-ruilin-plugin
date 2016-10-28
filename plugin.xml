@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="RuiLin_Plugin"
+    version="0.1">
+    
+    <name>RuiLin_Plugin</name>
+    <description>This plugin use to interactive</description>
+    
+    <js-module src="RuiLin_Plugin.js">
+        <clobbers target="window.RuiLin_Plugin" />
+    </js-module>
+    
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="RuiLin_Plugin">
+                <param name="ios-package" value="RuiLin_Plugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/RuiLin_Plugin.h" />
+        <source-file src="src/ios/RuiLin_Plugin.m" />
+    </platform>
+    
+</plugin>
